@@ -1,0 +1,48 @@
+/***** Styles Css ******/
+body {
+	background-image: url("../img/back_img.jpg");
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.main-content {
+	margin: 0 auto;
+    width: 960px;
+    background-color: #FFF;
+    padding: 10px;
+    text-align: center;
+    margin-top: 45px;
+}
+nav {
+	background-color: #000;
+	padding-top: 7px;
+    padding-bottom: 7px;
+}
+nav ul {
+	margin: 0 auto;
+	width: 40%;
+}
+nav ul li {
+	display: inline;
+}
+nav ul li a {
+	color: #FFF;
+	margin: 5%;
+    text-transform: uppercase;
+}
+nav ul li a:hover {
+	color: #FFF;
+}
+footer {
+	background-color: #000;
+	bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding-top: 7px;
+}
+footer p {
+	color: #FFF;
+	margin: 0 auto;
+    width: 50%;
+}
