@@ -3,47 +3,49 @@
 <head>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/styles.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/js.js"></script>
 </head>
 <body>
 	<header>
 		<nav>
 			<ul>
-				<li><a href="#">inicio</a></li>
-				<li><a href="#">servicios</a></li>
-				<li><a href="#">productos</a></li>
-				<li><a href="#">tiendas</a></li>
+				<li><a id="nav-home" href="#">inicio</a></li>
+				<li><a id="nav-services" href="#">servicios</a></li>
+				<li><a id="nav-products" href="#">productos</a></li>
+				<li><a id="nav-shops" href="#">tiendas</a></li>
 			</ul>			
 		</nav>
 	</header>
 	<div class="content">
 		<div class="main-content">
 			<div class="top-home">
-				<h1>PRESENTACI&Oacute;N</h1>
+				<h1 id="title-pre">PRESENTACI&Oacute;N</h1>
 				<p>En Carnicer&iacute;as ACME ponemos a su disposici&oacute;n las mejores carnes, embutidos y platos preparados, entre otras delicias gourmet. Si tienen un evento y quieren deleitar a sus invitados con unos productos sanos, frescos y sabrosos, contacten con nosotros.</p>
-				<h3>Reparto a domicilio</h3>
+				<h3 id="delivery">Reparto a domicilio</h3>
 				<p>Realicen su pedido hoy mismo y ma&ntilde;ana lo tendr&aacute;n listo en su domicilio.
-				<h3>Corte tradicional</h3>
-				<p>No tenemos badejas preparadas. Nuestro corte es artesano y profesional.<p>
+				<h3 id="cut">Corte tradicional</h3>
+				<p>No tenemos bandejas preparadas. Nuestro corte es artesano y profesional.<p>
 			</div>
 			<div class="cols-home">
 				<div class="cols-col-home">
-					<h4>Calidad</h4>
+					<h4 id="quality">Calidad</h4>
 					<img src="img/img-col-1.jpg">
 					<p>Carne de calidad de los valles piren&aacute;icos. Con las mejores garant&iacute;as de sanidad y sabor.</p>
 				</div>
 				<div class="cols-col-home">
-					<h4>Servicio 24h</h4>
+					<h4 id="serv">Servicio 24h</h4>
 					<img src="img/img-col-2.jpg">
 					<p>En nuestro transporte refrigerado garantizamos que cumpliremos en 24h con nuestros compromisos.</p>
 				</div>
 				<div class="cols-col-home">
-					<h4>Restauraci&oacute;n</h4>
+					<h4 id="rest">Restauraci&oacute;n</h4>
 					<img src="img/img-col-3.jpg">
-					<p>Servimos a los mejores restaurantes de Zaragoza. Si regentas un local de restauraci&oacute;n ll&acute;manos.</p>
+					<p>Servimos a los mejores restaurantes de Zaragoza. Si regentas un local de restauraci&oacute;n ll&aacute;manos.</p>
 				</div>
 				<div class="cols-col-home">
-					<h4>Charcuter&iacute;a</h4>
+					<h4 id="chart">Charcuter&iacute;a</h4>
 					<img src="img/img-col-4.jpg">
 					<p>Los mejores ejemplares de jam&oacute;n ib&eacute;rico y embutidos tradicionales. Especialistas en charcuter&iacute;a.</p>
 				</div>
@@ -61,7 +63,7 @@
 					<input type="text" name="tel">
 					<label>Mensaje*:</label>
 					<textarea></textarea>
-					<button>Enviar</button>
+					<button id="send">Enviar</button>
 				</form>
 			</div>
 		</div>
