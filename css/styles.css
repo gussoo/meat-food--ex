@@ -18,6 +18,9 @@ nav {
 	background-color: #000;
 	padding-top: 7px;
     padding-bottom: 7px;
+    /*position: absolute;
+    top: 0;
+    width: 100%*/
 }
 nav ul {
 	margin: 0 auto;
@@ -34,6 +37,7 @@ nav ul li a {
 nav ul li a:hover {
 	color: #FFF;
 }
+ul.topnav li.icon {display: none;}
 footer {
 	background-color: #000;
 	bottom: 0;
@@ -45,4 +49,87 @@ footer p {
 	color: #FFF;
 	margin: 0 auto;
     width: 50%;
+}
+#twitter-box {
+	right:0;
+	position: absolute;
+	top: 11%;
+    width: 18%;
+}
+#mapa-tiendas {
+	clear: both;
+}
+.cols-col-home {
+	width: 25%;
+	float: left;
+}
+.cols-col-home img {
+	max-width: 200px;
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+.media-alls {
+	padding-left: 30%;
+}
+.media-icon-neg {
+	margin: 15px;
+	float: left;
+}
+.form {
+	background-color: #CCC;
+	padding: 5%;
+	text-align: left;
+	clear: both;
+}
+
+@media only screen and (max-device-width: 768px) {
+  /* For general iPad layouts */
+  nav ul {
+    	width: 50%;
+	}
+	.cols-home {
+	    width: 100%;
+	}
+  .cols-col-home {
+    	width: 50%;
+	}
+	#twitter-box {
+	    position: relative;
+	    width: 100%;
+	}
+}
+
+@media only screen and (max-device-width: 481px) {
+  /* For portrait layouts only */
+  	.cols-col-home {
+    	width: 100%;
+	}
+	.media-alls {
+		width: 100%;
+		padding: 0;
+	}
+	.media-icon-neg {
+		width: 100%;
+	}
+	ul.topnav li:not(:first-child) {display: none;}
+	ul.topnav li.icon {
+	    float: right;
+	    display: inline-block;
+	}
+
+	ul.topnav.responsive {position: relative;}
+	ul.topnav.responsive li.icon {
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	}
+	ul.topnav.responsive li {
+	    float: none;
+	    display: inline;
+	}
+	ul.topnav.responsive li a {
+	    display: block;
+	    text-align: left;
+	}
+
 }

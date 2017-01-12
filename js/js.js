@@ -10,7 +10,6 @@ $(document).ready(function(){
 
 });
 
-
 function changeLangEN()
 {
 	document.getElementById("nav-home").innerHTML = 'home';
@@ -28,6 +27,29 @@ function changeLangEN()
 	document.getElementById("our-shops").innerHTML = 'Our Shops';
 }
 
+function enviar() {
+	var email = $('#email').val();
+	var msg = $('#mensaje').val();
+	campoVacio(email, "Email");	
+	campoVacio(msg, "Mensaje");
+}
+
+function campoVacio(campoNom, text) {
+	var confirmacio = false;
+	if(campoNom != '') confirmacio = true;
+	else alert("El campo " + text + " NO puede estar vacio!")
+	return confirmacio;
+}
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function hamburgerNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
 
 /***************** API Mapa *****************************/
 

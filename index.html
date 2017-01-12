@@ -10,13 +10,17 @@
 <body>
 	<header>
 		<nav>
-			<ul>
+			<ul class="topnav" id="myTopnav">
 				<li><a id="nav-home" href="#">inicio</a></li>
 				<li><a id="nav-services" href="#">servicios</a></li>
 				<li><a id="nav-products" href="#">productos</a></li>
 				<li><a id="nav-shops" href="#">tiendas</a></li>
+				<li class="icon">
+				    <a href="javascript:void(0);" onclick="hamburgerNav()">&#9776;</a>
+				</li>
 			</ul>			
-		</nav>
+		</nav>  
+</ul>
 	</header>
 	<div class="content">
 		<div class="main-content">
@@ -49,31 +53,32 @@
 					<img src="img/img-col-4.jpg">
 					<p>Los mejores ejemplares de jam&oacute;n ib&eacute;rico y embutidos tradicionales. Especialistas en charcuter&iacute;a.</p>
 				</div>
-			</div>
-			<a href="https://twitter.com/intent/tweet?button_hashtag=MeatIsHealthy" class="twitter-hashtag-button" data-show-count="false">Tweet #MeatIsHealthy</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-			            <a class="twitter-timeline"  href="https://twitter.com/hashtag/MeatIsHealthy" data-widget-id="819638364248961025">#MeatIsHealthy Tweets</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-          
-			<div id="mapaDenuncias">
+			</div>			       
+			<div id="mapa-tiendas">
 				<h2 id="our-shops">Nuestras tiendas</h2>
 				<div id="map" style="width:940px;height:475px;"></div>
 			</div>
-			<div class="media">
-				<a href="#"><img src="img/face.jpg"></a>
-				<a href="#"><img src="img/gmail.jpg"></a>
-				<a href="#"><img src="img/place.jpg"></a>
+			<div class="media-alls">
+				<div class="media-icon-neg"><a target="_blank" href="http://facebook.com"><img src="img/face.jpg"></a></div>
+				<div class="media-icon-neg"><a target="_blank" href="http://gmail.com"><img src="img/gmail.jpg"></a></div>
+				<div class="media-icon-neg"><a target="_blank" href="http://maps.google.com"><img src="img/place.jpg"></a></div>
 			</div>
 			<div class="form">
-				<form>
-					<label>Email*:</label>
-					<input type="text" name="email">
-					<label>Tel*:</label>
-					<input type="text" name="tel">
-					<label>Mensaje*:</label>
-					<textarea></textarea>
-					<button id="send">Enviar</button>
-				</form>
+				<label>Email*:</label>
+				<input placeholder="introduzca su email" type="text" id="email">
+				<label>Tel:</label>
+				<input placeholder="introduzca su num de tel" type="number" step="1" id="tel">
+				<br>
+				<label>Mensaje*:</label>
+				<textarea id="mensaje"></textarea>
+				<br>
+				<button id="send" onclick="enviar();">Enviar</button>
 			</div>
+		</div>
+		<div id="twitter-box">
+			<a href="https://twitter.com/intent/tweet?button_hashtag=MeatIsHealthy" class="twitter-hashtag-button" data-show-count="false">Tweet #MeatIsHealthy</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			            <a class="twitter-timeline"  href="https://twitter.com/hashtag/MeatIsHealthy" data-widget-id="819638364248961025">#MeatIsHealthy Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>   
 		</div>
 	</div>
 	<footer>
