@@ -25,4 +25,67 @@ function changeLangEN()
 	document.getElementById("rest").innerHTML = 'Restaurants';
 	document.getElementById("chart").innerHTML = 'Charcuterie';
 	document.getElementById("send").innerHTML = 'Send';
+	document.getElementById("our-shops").innerHTML = 'Our Shops';
 }
+
+
+/***************** API Mapa *****************************/
+
+      function initMap() {
+      	var center = {lat: 41.3850639, lng: 2.1734034999999494}; //Barcelona
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: center
+        });
+
+        setMarkers(map);
+      }
+     
+
+      function setMarkers(map) {
+      	if(localStorage.getItem('denuncias')) var denuncias = JSON.parse(localStorage.getItem('denuncias'));
+
+        var denunciasG = [];
+        var latitud;
+        var longitud;
+        var id;
+		//for (var i = denuncias.length - 1; i >= 0; i--) {
+      		latitud  = parseFloat(41.435312);
+      		longitud = parseFloat(2.1720758999999816);
+      		id = 'shop 1';
+      		if((latitud) && (longitud)) denunciasG.push([id, latitud, longitud]);
+      		latitud  = parseFloat(41.3810829);
+      		longitud = parseFloat(2.1548639000000094);
+      		id = 'shop 2';
+      		if((latitud) && (longitud)) denunciasG.push([id, latitud, longitud]);
+      		latitud  = parseFloat(41.39869160000001);
+      		longitud = parseFloat(2.173824100000047);
+      		id = 'shop 3';
+      		if((latitud) && (longitud)) denunciasG.push([id, latitud, longitud]);
+      		latitud  = parseFloat(41.381445);
+      		longitud = parseFloat(2.1730300000000398);
+      		id = 'shop 4';
+      		if((latitud) && (longitud)) denunciasG.push([id, latitud, longitud]);
+      		latitud  = parseFloat(41.4300139);
+      		longitud = parseFloat(2.142215999999962);
+      		id = 'shop 5';
+      		if((latitud) && (longitud)) denunciasG.push([id, latitud, longitud]);
+      	//};
+        
+          var shape = {
+            coords: [1, 1, 1, 20, 18, 20, 18, 1],
+            type: 'poly'
+          };
+          for (var i = 0; i < denunciasG.length; i++) {
+            var denuncia = denunciasG[i];
+            var marker = new google.maps.Marker({
+              position: {lat: denuncia[1], lng: denuncia[2]},
+              map: map,
+              //icon: image,
+              shape: shape,
+              title: denuncia[0],
+              zIndex: denuncia[3]
+            });
+          }
+      }
+/************************************************************************/
